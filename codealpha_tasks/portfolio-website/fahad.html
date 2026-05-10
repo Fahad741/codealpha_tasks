@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Fahad | Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .navbar{
+      background:#020617;
+      padding:15px 0;
+    }
+
+    .navbar-brand{
+      color:#38bdf8 !important;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .nav-link{
+      color:white !important;
+      margin-left:15px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#38bdf8 !important;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:100px 0;
+    }
+
+    .hero h1{
+      font-size:60px;
+      font-weight:bold;
+    }
+
+    .hero span{
+      color:#38bdf8;
+    }
+
+    .hero p{
+      color:#cbd5e1;
+      line-height:1.8;
+      margin-top:20px;
+    }
+
+    .btn-custom{
+      background:#38bdf8;
+      color:white;
+      padding:12px 25px;
+      border:none;
+      border-radius:10px;
+      text-decoration:none;
+      transition:0.3s;
+      display:inline-block;
+      margin-top:20px;
+      margin-right:10px;
+    }
+
+    .btn-custom:hover{
+      background:#0ea5e9;
+      transform:translateY(-3px);
+    }
+
+    .profile-img{
+      width:200px;
+      border-radius:20px;
+      border:5px solid #38bdf8;
+      box-shadow:0 0 30px rgba(56,189,248,0.4);
+    }
+
+    section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+      color:#38bdf8;
+      font-weight:bold;
+    }
+
+    .card-custom{
+      background:#1e293b;
+      border:none;
+      border-radius:20px;
+      padding:25px;
+      height:100%;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .card-custom:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(56,189,248,0.4);
+    }
+
+    .card-custom h4{
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .skill-box{
+      background:#1e293b;
+      padding:15px;
+      border-radius:12px;
+      text-align:center;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .skill-box:hover{
+      background:#38bdf8;
+      transform:scale(1.05);
+    }
+
+    .contact-box{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:12px;
+      margin-top:15px;
+      border:none;
+      border-radius:10px;
+      background:#0f172a;
+      color:white;
+    }
+
+    footer{
+      background:#020617;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    .social-icons a{
+      color:white;
+      font-size:25px;
+      margin-right:15px;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      color:#38bdf8;
+    }
+
+    .badge-custom{
+      background:#38bdf8;
+      padding:8px 14px;
+      border-radius:20px;
+      margin:5px;
+      display:inline-block;
+      color:white;
+    }
+
+    @media(max-width:768px){
+      .hero{
+        text-align:center;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .profile-img{
+        width:260px;
+        margin-top:40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Muhammad Fahad</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+        <h1>Hello, I'm <span>Muhammad Fahad</span></h1>
+        <h3 class="mt-3">Computer Science Student & Web Developer</h3>
+
+        <p>
+          I am a Computer Science student with a strong interest in web development,
+          software engineering, and problem solving. I enjoy building practical and
+          user-friendly projects that solve real-world problems.
+        </p>
+
+        <a href="#projects" class="btn-custom">View Projects</a>
+        <a href="#contact" class="btn-custom">Contact Me</a>
+
+        <div class="social-icons mt-4">
+          <a href="https://github.com/Fahad741" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-fahad-b64060387" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:muhammadfahad1507@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="profile.jpeg" alt="Muhammad Fahad" class="profile-img img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+
+    <div class="card-custom">
+      <p>
+        I am currently studying BS Computer Science at National University of Modern Languages Lahore.
+        I have experience in frontend and backend web development, database management,
+        and Python programming. My goal is to become a professional full-stack developer
+        and continuously improve my technical and creative skills.
+      </p>
+
+      <div class="mt-4">
+        <span class="badge-custom">BSCS - 5th Semester</span>
+        <span class="badge-custom">Frontend Development</span>
+        <span class="badge-custom">Backend Development</span>
+        <span class="badge-custom">Python Programming</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Education</h2>
+    </div>
+
+    <div class="card-custom">
+      <h4>BS Computer Science</h4>
+      <p>
+        National University of Modern Languages Lahore <br>
+        2024 - 2027 <br>
+        Current Semester: 5th Semester
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-3"><div class="skill-box">HTML</div></div>
+      <div class="col-md-3"><div class="skill-box">CSS</div></div>
+      <div class="col-md-3"><div class="skill-box">JavaScript</div></div>
+      <div class="col-md-3"><div class="skill-box">Bootstrap</div></div>
+      <div class="col-md-3"><div class="skill-box">PHP</div></div>
+      <div class="col-md-3"><div class="skill-box">MySQL</div></div>
+      <div class="col-md-3"><div class="skill-box">Python</div></div>
+      <div class="col-md-3"><div class="skill-box">DSA</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-6">
+        <div class="card-custom">
+          <h4>Speedo Routes System</h4>
+          <p>
+            A transport information system for Lahore Speedo Bus services with map integration,
+            route tracking, and station details.
+          </p>
+
+          <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+
+          <ul>
+            <li>Interactive maps</li>
+            <li>Bus route search</li>
+            <li>Responsive interface</li>
+            <li>Station management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card-custom">
+          <h4>Pet Adoption Website</h4>
+          <p>
+            A responsive web platform that helps users adopt pets through an organized system.
+          </p>
+
+          <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+
+          <ul>
+            <li>Pet listings</li>
+            <li>Admin panel</li>
+            <li>Adoption requests</li>
+            <li>Responsive UI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card-custom">
+          <h4>Snake Water Gun Game</h4>
+          <p>
+            A Python-based command line game where users play against the computer.
+          </p>
+
+          <p><strong>Technologies:</strong> Python</p>
+
+          <ul>
+            <li>Random gameplay</li>
+            <li>Score calculation</li>
+            <li>Interactive user experience</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card-custom">
+          <h4>Jarvis Voice Assistant</h4>
+          <p>
+            A voice-controlled assistant built using Python and speech recognition.
+          </p>
+
+          <p><strong>Technologies:</strong> Python, Speech Recognition</p>
+
+          <ul>
+            <li>Voice commands</li>
+            <li>Open applications</li>
+            <li>Automation tasks</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Experience</h2>
+    </div>
+
+    <div class="card-custom">
+      <h4>Academic & Personal Development Experience</h4>
+
+      <ul>
+        <li>Frontend and Backend Web Development</li>
+        <li>Database Management Practice</li>
+        <li>Academic Project Development</li>
+        <li>Python Programming & Automation</li>
+        <li>Problem Solving & DSA Practice</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Achievements & Certifications</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h4>Digital Marketing Certification</h4>
+          <p>Itronix Solutions</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h4>Python for DSA Certification</h4>
+          <p>Itronix Solutions</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h4>Web Development Course Completion</h4>
+          <p>Completed practical frontend and backend learning.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h4>Technical Presentations</h4>
+          <p>Participated in project demonstrations and presentations.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Testimonials</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <p>
+            "Muhammad Fahad demonstrates excellent problem-solving abilities and dedication toward development projects."
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <p>
+            "Creative and hardworking student with strong interest in web technologies and programming."
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <p>
+            "Shows continuous improvement in frontend development and backend integration skills."
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- BLOG -->
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Articles & Learning</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h4>Responsive Web Design</h4>
+          <p>Understanding modern responsive layouts and user experience.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h4>Python for Beginners</h4>
+          <p>Exploring Python programming and automation basics.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h4>Database Management</h4>
+          <p>Importance of MySQL in web applications and data handling.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 mb-4">
+        <div class="card-custom">
+          <h4>Contact Information</h4>
+
+          <p><i class="fas fa-user"></i> Muhammad Fahad</p>
+          <p><i class="fas fa-phone"></i> 03098775292</p>
+          <p><i class="fas fa-envelope"></i> muhammadfahad1507@gmail.com</p>
+          <p><i class="fas fa-location-dot"></i> Firdous Market, Lahore</p>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="contact-box">
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button class="btn-custom">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Muhammad Fahad | All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
